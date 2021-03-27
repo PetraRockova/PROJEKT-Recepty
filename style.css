@@ -33,3 +33,122 @@ Nastav je receptům jako obrázky na pozadí (tj. nepřidávej je jako <img> do 
 Na rozložení prvků NEPOUŽÍVEJ absolutní pozicování, ale pouze flexboxy.
 Flexboxy mohou být vnořené do sebe, klidně několikrát.
 */
+
+h1{
+font-family: 'Raleway', sans-serif;
+font-size: 28px;
+color: white;
+margin-bottom: 0;
+text-shadow: 1px 1px 4px rgb(15, 15, 15);
+}
+
+h2{
+font-family: 'Source Sans Pro', sans-serif;
+font-size: 14px;
+font-weight: 400;
+color: white;
+margin: 0;
+text-shadow: 1px 1px 4px rgb(15, 15, 15);
+}
+
+.nadpis{
+display: flex;
+justify-content: space-between;
+}
+
+.prvni{
+background-image: url(images/salat.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+min-height: 200px;
+
+}
+
+.druhy{
+background-image: url(images/chlebicek.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+}	
+
+.treti{
+background-image: url(images/tacos.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+}
+
+.ctvrty{
+background-image: url(images/cizrna.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+}
+
+.paty{
+background-image: url(images/burger.jpg);
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+}
+
+.druhy, .treti, .ctvrty, .paty{
+min-height: 90px;
+}
+
+.prvni, .druhy, .treti, .ctvrty{
+margin-bottom: 1px;}
+
+.recept{
+padding: 10px;
+}
+
+
+@media screen and (min-width:480px){
+
+.kontejner{
+display: flex;
+flex-wrap: wrap;
+}	
+
+.prvni{
+flex: 1 1 100%;
+min-height: 250px;
+}
+
+.male{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+}
+
+.druhy, .treti, .ctvrty, .paty{
+flex: 0 0 calc((100% - 1px) / 2);
+min-height: 150px;
+}
+
+.paty{
+margin-bottom: 1px;
+}
+
+.recept{
+padding: 20px;
+}
+
+}
+
+@media screen and (min-width:860px){
+
+.kontejner{
+flex-wrap: nowrap;
+}
+
+.prvni{
+min-height: 400px;
+}
+
+.druhy, .treti, .ctvrty, .paty{
+min-height: 200px;
+}
+}
